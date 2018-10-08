@@ -6,6 +6,10 @@ using std::cout;
 using std::endl;
 using std::cin;
 
+#include <iostream>
+#include <iomanip>
+using std::setprecision;
+
 short sum_1(short n);
 
 long sum_2(long n);
@@ -116,7 +120,7 @@ long sum_2(long n)
 	return C_Sum;
 }
 
-//problem 
+//problem 4
 float Factorial_1(long n)
 {
 	bool out = true;
@@ -187,7 +191,7 @@ float f_1(int n)
 			save = (1 / input) + save;
 			if (((save < before_save) || (save < 0)) && out)
 			{
-				cout << "**overflow  for f_2 at:" << index << " **\t";
+				cout << "**overflow  for f_2 at:" << setprecision(20) << index << " **\t";
 				out = false;
 			}
 		}
@@ -200,7 +204,7 @@ double f_2(int n)
 	bool out = true;
 	double save = 0, before_save = 0;
 	double input;
-	if (n <= 1)
+	if (n <= 1) 
 	{
 		return 0;
 	}
@@ -212,7 +216,7 @@ double f_2(int n)
 			save = (1 / input) + save;
 			if (((save < before_save) || (save < 0)) && out)
 			{
-				cout << "**overflow  for f_2 at:" << index << " **\t";
+				cout  << "**overflow  for f_2 at:" << setprecision(20) << index << " **\t";
 				out = false;
 			}
 		}
